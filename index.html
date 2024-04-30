@@ -14,6 +14,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -24,6 +25,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px #0f0;
+    margin-bottom: 20px; /* Agregado para separación */
 }
 
 .alert-text {
@@ -46,7 +48,7 @@ setTimeout(function() {
     var message = document.createElement('p');
     message.classList.add('alert-text');
     message.textContent = "Esta vez es broma, pero no dejes de prestar atención";
-    document.body.appendChild(message);
+    document.querySelector('.container').appendChild(message);
 }, 5000);
 </script>
 
